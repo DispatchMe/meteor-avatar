@@ -1,14 +1,14 @@
+var defaultImageFallback = '/packages/dispatch_avatar/images/default.jpg';
+
 Template.avatar.helpers({
+  defaultImageFallback: function () {
+    return defaultImageFallback;
+  },
   spinnerClass: function () {
     return this.size <= 100 ? 'spinner--small' : '';
   },
   src: function () {
-    // If src override exists, use it.
     if (this.src) return this.src;
-
-    // Otherwise generate src URL based on user object.
-    if (!this.user) return;
-
-    return Avatar.imageUrl(this.user, this.size || 100);
+    return this.customImageFallback || defaultImageFallback;
   }
 });
