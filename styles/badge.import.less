@@ -1,0 +1,38 @@
+// Badge Base // ---------------------------------------------------------------
+.badge {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: @avatar-badge-size;
+  height: @avatar-badge-size;
+  padding: 0 (@avatar-badge-size / 4);
+
+  font-size: @avatar-badge-size / 2;
+  font-weight: @avatar-badge-fontWeight;
+  line-height: @avatar-badge-size - 2;
+  color: @avatar-color--white;
+
+  border: 1px solid @avatar-color--skeleton;
+  border-radius: (@avatar-badge-size / 2);
+}
+
+// Badge Components // ---------------------------------------------------------
+.badge-icon {
+  flex: 1;
+  line-height: 0;
+}
+
+// Badge Color Variants // -----------------------------------------------------
+.badge--positive {
+  background: @avatar-color--blue;
+}
+
+.badge--warning {
+  background: @avatar-color--red;
+}
+
+.badge--success {
+  background: @avatar-color--green;
+}

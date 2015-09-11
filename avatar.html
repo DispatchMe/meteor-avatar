@@ -1,10 +1,16 @@
 <template name="avatar">
-	<div class="avatar {{class}} {{#if isLoading}}is-loading{{/if}} {{#if $eq src '/user.jpg'}}avatar--placeholder{{/if}}">
+	<div class="avatar {{class}} {{#if isLoading}}is-loading{{/if}} {{#if $eq src defaultImageFallback}}avatar--placeholder{{/if}}">
+		
 		{{#spinner type='pulse' class=spinnerClass visible=isLoading}}
+
 			<img class="avatar-image" src="{{src}}"/>
+					
 			{{#if badgeClass}}
-				<div class="badge {{badgeClass}}"><div class="badge-icon"></div></div>
+				<div class="badge {{badgeClass}}">
+					<div class="badge-icon"></div>
+				</div>
 			{{/if}}
+
 		{{/spinner}}
 	</div>
 </template>
