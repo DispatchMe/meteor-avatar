@@ -47,5 +47,5 @@ Package.onTest(function (api) {
   api.addFiles([
     'tests/prepare.html',
     'tests/avatar.js'
-    ], 'web');
+  ], 'web');
 });

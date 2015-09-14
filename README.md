@@ -8,4 +8,7 @@ A tiny avatar component for meteor.
 
 ```
 {{> avatar class="example" }}
+
+// Override default placeholder
+{{> avatar class="example" customImageFallback="<IMAGE_SOURCE>"}}
 ```
