@@ -11,7 +11,7 @@ Package.onUse(function (api) {
     'templating@1.1.1',
 
     // atmosphere
-    'dispatch:spinner@0.0.3',
+    'dispatch:spinner@0.0.4',
     'flemay:less-autoprefixer',
     'raix:handlebar-helpers'
   ], 'web');
@@ -28,4 +28,24 @@ Package.onUse(function (api) {
     api.addFiles([
     'images/default.jpg',
   ], 'web', {isAsset: true});
+});
+
+Package.onTest(function (api) {
+  api.use('sanjo:jasmine@0.18.0');
+
+  api.use([
+    // core
+    'templating@1.1.1',
+
+    // atmosphere
+    'dispatch:view-extensions',
+
+    // package
+    'dispatch:avatar'
+  ], 'web');
+
+  api.addFiles([
+    'tests/prepare.html',
+    'tests/avatar.js'
+    ], 'web');
 });
