@@ -1,6 +1,6 @@
 Package.describe({
   name: 'dispatch:avatar',
-  version: '1.0.1',
+  version: '1.0.0',
   summary: 'Simple avatar component',
   git: 'https://github.com/DispatchMe/meteor-avatar.git',
 });
@@ -12,8 +12,8 @@ Package.onUse(function (api) {
 
     // atmosphere
     'dispatch:spinner@0.0.4',
-    'flemay:less-autoprefixer',
-    'raix:handlebar-helpers'
+    'flemay:less-autoprefixer@1.0.2',
+    'raix:handlebar-helpers@0.2.4'
   ], 'web');
 
   api.addFiles([
