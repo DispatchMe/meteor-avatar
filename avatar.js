@@ -1,12 +1,8 @@
-var defaultImageFallback = '/packages/dispatch_avatar/images/default.jpg';
+const defaultImageFallback = '/packages/dispatch_avatar/images/default.svg';
 
 Template.avatar.helpers({
-  defaultImageFallback: function () {
-    return defaultImageFallback;
-  },
-  spinnerClass: function () {
-    return this.size <= 100 ? 'spinner--small' : '';
-  },
+  isPlaceholder: () => !Template.currentData().src,
+  spinnerClass: () => Template.currentData().size <= 100 ? 'spinner--small' : '',
   src: function () {
     if (this.src) return this.src;
     return this.customImageFallback || defaultImageFallback;
