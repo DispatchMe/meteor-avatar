@@ -6,6 +6,8 @@ Package.describe({
 });
 
 Package.onUse(function (api) {
+  api.versionsFrom('1.2');
+
   api.use([
     // core
     'ecmascript',
@@ -36,6 +38,7 @@ Package.onTest(function (api) {
   api.use([
     // core
     'ecmascript',
+    'jquery',
     'templating',
 
     // atmosphere
