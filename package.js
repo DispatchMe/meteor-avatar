@@ -34,6 +34,7 @@ Package.onUse(function (api) {
 
 Package.onTest(function (api) {
   api.use('sanjo:jasmine@0.18.0');
+  api.versionsFrom('1.2');
 
   api.use([
     // core
