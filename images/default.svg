@@ -3,10 +3,10 @@
     <circle id="avatar_a" cx="11" cy="11" r="11"/>
   </defs>
   <g fill="none" fill-rule="evenodd">
-    <mask id="avatar_b" fill="#fff">
+    <mask id="avatar_b" fill="#ffffff">
       <use xlink:href="#avatar_a"/>
     </mask>
-    <use fill="#F5F5F5" xlink:href="#avatar_a"/>
+    <use fill="none" xlink:href="#avatar_a"/>
     <g mask="url(#avatar_b)">
       <path d="M3 19.605c0-4.127 3.35-7.473 7.48-7.473h.833c4.132 0 7.48 3.354 7.48 7.473v7.473H3v-7.473z" fill="#4A4A4A"/>
       <path d="M4.373 19.605v7.473L3 25.705h15.794l-1.373 1.373v-7.473c0-3.364-2.736-6.1-6.107-6.1h-.832a6.104 6.104 0 0 0-6.107 6.1z" fill="#DADADA"/>
