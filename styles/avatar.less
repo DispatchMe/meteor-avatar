@@ -3,8 +3,6 @@
 
 // Avatar Mixins // ------------------------------------------------------------
 .m-avatar-mask() {
-  border: 1px solid;
-  border-color: transparent;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -12,27 +10,28 @@
 // Avatar // -------------------------------------------------------------------
 .avatar {
   position: relative;
-  width: @avatar-size--default;
   height: @avatar-size--default;
-  border-radius: 50%;
+  width: @avatar-size--default;
+  background-color: @avatar-color--background;
+  .m-avatar-mask();
 }
 
 // Avatar Sizes // -------------------------------------------------------------
 .avatar--small {
-  width: @avatar-size--small;
   height: @avatar-size--small;
+  width: @avatar-size--small;
 }
 
 .avatar--large {
-  width: @avatar-size--large;
   height: @avatar-size--large;
+  width: @avatar-size--large;
 }
 
 // Avatar Components // --------------------------------------------------------
 .avatar-image {
   position: relative;
-  width: 100%;
   height: 100%;
+  width: 100%;
   .m-avatar-mask();
 }
 
@@ -45,23 +44,14 @@
 // Avatar States // ------------------------------------------------------------
 // When spinner is visible
 .avatar.is-loading {
-  border: 1px solid @avatar-color--border;
   background: @avatar-color--skeleton;
-}
-
-// When placeholder image (/user.jpg) is shown
-.avatar--placeholder {
-  padding: 1px;
-}
-
-.avatar--placeholder > .avatar-image {
-  border-color: @avatar-color--border;
+  border: 1px solid @avatar-color--border;
 }
 
 // Fallback in case the img[src] is broken
 .avatar:empty {
-  border-color: @avatar-color--border;
   background-color: @avatar-color--skeleton;
+  border: 1px solid @avatar-color--border;
   .m-avatar-mask();
 }
 

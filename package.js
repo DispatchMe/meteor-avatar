@@ -6,14 +6,16 @@ Package.describe({
 });
 
 Package.onUse(function (api) {
+  api.versionsFrom('1.2');
+
   api.use([
-    //core
-    'templating@1.1.1',
+    // core
+    'ecmascript',
+    'templating',
 
     // atmosphere
-    'dispatch:spinner@0.0.4',
-    'flemay:less-autoprefixer@1.0.2',
-    'raix:handlebar-helpers@0.2.4'
+    'dispatch:spinner',
+    'flemay:less-autoprefixer',
   ], 'web');
 
   api.addFiles([
@@ -26,16 +28,19 @@ Package.onUse(function (api) {
   ], 'web');
 
     api.addFiles([
-    'images/default.jpg',
+    'images/default.svg',
   ], 'web', {isAsset: true});
 });
 
 Package.onTest(function (api) {
   api.use('sanjo:jasmine@0.18.0');
+  api.versionsFrom('1.2');
 
   api.use([
     // core
-    'templating@1.1.1',
+    'ecmascript',
+    'jquery',
+    'templating',
 
     // atmosphere
     'dispatch:view-extensions',

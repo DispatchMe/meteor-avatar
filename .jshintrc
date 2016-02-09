@@ -1,0 +1,8 @@
+{
+  "esnext": true,
+  "globals": {},
+  "predef": [
+    "$",
+    "Template"
+  ]
+}

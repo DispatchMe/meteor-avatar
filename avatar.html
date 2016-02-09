@@ -1,5 +1,5 @@
 <template name="avatar">
-	<div class="avatar {{class}} {{#if isLoading}}is-loading{{/if}} {{#if $eq src defaultImageFallback}}avatar--placeholder{{/if}}">
+	<div class="avatar {{class}} {{#if isLoading}}is-loading{{/if}} {{#if isPlaceholder}}avatar--placeholder{{/if}}">
 		
 		{{#spinner type='pulse' class=spinnerClass visible=isLoading}}
 

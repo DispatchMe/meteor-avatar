@@ -20,7 +20,7 @@ describe('Avatar', function () {
     expect($container).toContainElement(elements.avatarContainer);
     expect($container).toContainElement(elements.avatarImage);
 
-    expect($(elements.avatarImage).attr('src')).toEqual('/packages/dispatch_avatar/images/default.jpg');
+    expect($(elements.avatarImage).attr('src')).toEqual('/packages/dispatch_avatar/images/default.svg');
     expect($(elements.avatarContainer).hasClass('avatar--placeholder'));
   });
 
